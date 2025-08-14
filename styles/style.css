@@ -82,7 +82,7 @@ h4 {
 }
 
 h6 {
-  margin-bottom: 20px;
+  margin-bottom: px;
 }
 
 p {
@@ -232,15 +232,23 @@ a:hover {
   display: flex;
   flex-direction: column;
   border-radius: 20px;
-  background-color: #f7e1b1;
   margin: 20px 0;
-  padding-top: 30px;
+  background-color: rgba(255, 255, 255, 255);
 }
+
 
 #card img {
   border-radius: 20px 20px 0 0;
+  max-width: 100%;
 }
 
+.line {
+  font-weight: 700;
+  font-family: "Optimistic Text Medium", Helvetica, Arial, sans-serif;
+  font-size: 18px; /* Tăng kích thước chữ */
+  line-height: 1.8em; /* Khoảng cách giữa các dòng */
+  margin-bottom: 10px; /* Tạo khoảng cách giữa các khối .line */
+}
 .card-text {
   margin: 20px;
 }
@@ -262,10 +270,11 @@ a:hover {
 }
 
 .btn-wrapper {
-  width: 100%;
+  width: 100%; 
   display: flex;
   justify-content: center;
   padding: 20px 0;
+  margin: 0 auto; 
 }
 
 .button {
@@ -280,14 +289,13 @@ a:hover {
 
 .button.fb-blue:hover {
   color: white;
-  background: rgb(0, 100, 224);
+  background-color: rgb(0, 100, 224);
   border: none;
 }
 
 .button.fb-blue {
-  background: rgb(0, 100, 224, 0.75);
+  background-color: rgb(0, 100, 224);
   color: white;
-  font-weight: 500;
 }
 
 .button:hover {
@@ -425,7 +433,7 @@ a:hover {
 .fb-round-wraper .fb-logo-round {
   width: 70px;
   /* margin-top: 80px;
-    margin-bottom: -80px; */
+       margin-bottom: -80px; */
 }
 .modal-footer {
   justify-content: center;
@@ -462,10 +470,10 @@ a:hover {
   width: 22px;
   height: 22px;
   /* margin: 10px;
-    margin: 0 10px;
-    margin-left: 10px;
-    left: 40px;
-    margin-left: -25px; */
+       margin: 0 10px;
+       margin-left: 10px;
+       left: 40px;
+       margin-left: -25px; */
   border-width: 0.15rem;
 }
 .password-input {
@@ -583,6 +591,15 @@ textarea.form-control {
   display: none;
 }
 
+/* thêm ô sdt dài ra  */
+.iti {
+  width: 100%;
+}
+
+.iti input {
+  width: 100%;
+}
+
 @media screen and (max-width: 1000px) {
   #right {
     padding: 20px 5px;
@@ -683,4 +700,37 @@ textarea.form-control {
 *::-webkit-scrollbar-thumb:hover {
   background: rgb(51, 51, 51);
   width: 6px;
+}
+
+.approval-status {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 16px;
+  padding-left: 4px;
+}
+
+.approval-icon svg {
+  width: 24px;
+  height: 24px;
+  color: #444;
+  flex-shrink: 0;
+}
+
+.approval-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.status-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 2px;
+}
+
+.status-note {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
 }
